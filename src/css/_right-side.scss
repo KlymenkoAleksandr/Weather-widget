@@ -1,0 +1,51 @@
+@import 'mixins';
+
+.widget__right-side {
+    width: calc(100% - 250px);
+    @include flex (space-between, flex-end);
+    flex-direction: column;
+    padding: 34px 18px 16px 26px;
+    &__header {
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            color: #507998;
+        }
+        p {
+            font-size: 12px;
+            line-height: 2;
+            letter-spacing: 1.71429px;
+            color: #98C6E8;
+            text-align: right;
+            padding-right: 16px;
+            margin-top: -10px;
+        }
+    }
+    &__footer {
+        @include flex (space-between, flex-end);
+        color: $white;
+        width: 100%;
+        .footer-date {
+            padding-bottom: 10px;
+        }
+        span {
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: -0.555556px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            opacity: 0.85;
+            font-style: normal;
+        }
+        h2 {
+            font-size: 100px;
+            line-height: 1.18;
+            letter-spacing: -7px;
+            margin: 0;
+        }
+    }
+}  

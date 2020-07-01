@@ -1,0 +1,28 @@
+@import 'mixins';
+@import 'reset';
+@import 'right-side';
+@import 'left-side';
+
+body {
+    font-family: 'ABeeZee', 'sans-serif';
+    font-style: italic;
+}
+.widget-wraper {
+    background: url(../images/background.png) no-repeat center / cover;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 0 auto;
+    @include flex(center, center);
+    .widget {
+        background: url(../images/shadow.png) no-repeat center / cover;
+        width: 650px;
+        height: 504px;
+        &--bg {
+            background: url(../images/san-fransisco.png) no-repeat center / cover;
+            display: flex;
+        }
+        &__left-side {
+            width: 250px;
+        }
+    }
+}

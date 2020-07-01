@@ -1,0 +1,10 @@
+@mixin flex ($justify: start, $align: flex-start) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+$white: #ffffff;
+
+%line-height {
+    line-height: 1.16;
+}

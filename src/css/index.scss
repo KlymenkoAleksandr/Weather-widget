@@ -2,6 +2,7 @@
 @import 'reset';
 @import 'right-side';
 @import 'left-side';
+@import 'loader';
 
 body {
     font-family: 'ABeeZee', 'sans-serif';
@@ -16,7 +17,7 @@ body {
     .widget {
         background: url(../images/shadow.png) no-repeat center / cover;
         width: 650px;
-        height: 504px;
+        height: 540px;
         &--bg {
             background: url(../images/san-fransisco.png) no-repeat center / cover;
             display: flex;

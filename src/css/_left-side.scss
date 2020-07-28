@@ -28,23 +28,26 @@
         a:nth-child(2) {
             margin-left: 10px;
         }
-        a:hover,
-        a:focus,
-        a:active {
+        a.active {
             border-bottom: 3px solid #B5DDFA;
             color: #5C5C5C;
         }
     }
     &__forecast {
         padding: 8px 22px 0 28px;
+        overflow: auto;
+        height: 260px;
         &>li {
             @include flex (space-between, center);
             padding: 14px 6px 8px 4px;
             font-size: 12px;
             @extend %line-height;
             color: #4F4F4F;
-            span {
-                vertical-align: super;
+            .weather-date {
+                width: 70px;
+            }
+            .weather-temp {
+                @include flex (start, center);
             }
         }
         &>li:not(:last-child) {

@@ -125,13 +125,13 @@ table {
       padding: 0 10px 10px; }
     .widget__left-side__period a:nth-child(2) {
       margin-left: 10px; }
-    .widget__left-side__period a:hover,
-    .widget__left-side__period a:focus,
-    .widget__left-side__period a:active {
+    .widget__left-side__period a.active {
       border-bottom: 3px solid #B5DDFA;
       color: #5C5C5C; }
   .widget__left-side__forecast {
-    padding: 8px 22px 0 28px; }
+    padding: 8px 22px 0 28px;
+    overflow: auto;
+    height: 260px; }
     .widget__left-side__forecast > li {
       display: flex;
       justify-content: space-between;
@@ -139,11 +139,60 @@ table {
       padding: 14px 6px 8px 4px;
       font-size: 12px;
       color: #4F4F4F; }
-      .widget__left-side__forecast > li span {
-        vertical-align: super; }
+      .widget__left-side__forecast > li .weather-date {
+        width: 70px; }
+      .widget__left-side__forecast > li .weather-temp {
+        display: flex;
+        justify-content: start;
+        align-items: center; }
     .widget__left-side__forecast > li:not(:last-child) {
       border-bottom: 1px solid #E8E8E8;
       padding-bottom: 4px; }
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 160px;
+  height: 160px; }
+
+.lds-ripple div {
+  position: absolute;
+  border: 6px solid aqua;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s; }
+
+@keyframes lds-ripple {
+  0% {
+    top: 72px;
+    left: 72px;
+    width: 0;
+    height: 0;
+    opacity: 1; }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 144px;
+    height: 144px;
+    opacity: 0; } }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center; }
+  .loader.open {
+    display: flex; }
 
 body {
   font-family: 'ABeeZee', 'sans-serif';
@@ -160,7 +209,7 @@ body {
   .widget-wraper .widget {
     background: url(../images/shadow.png) no-repeat center/cover;
     width: 650px;
-    height: 504px; }
+    height: 540px; }
     .widget-wraper .widget--bg {
       background: url(../images/san-fransisco.png) no-repeat center/cover;
       display: flex; }
